@@ -22,7 +22,7 @@ for ((i=1; i<=${round};i++)); do
     ls `pwd`/lgs.sort.bam > lgs.sort.bam.fofn;
     
     # 运行 nextpolish2.py 进行基因组抛光
-    python nextpolish2.py -g ${input} -l lgs.sort.bam.fofn -r ${read_type} -p ${threads} -sp -o genome.nextpolish.fa;
+    python /usr/bin/PyNextPolish-1.0.1/nextpolish2.py -g ${input} -l lgs.sort.bam.fofn -r ${read_type} -p ${threads} -sp -o genome.nextpolish.fa;
     
     # 如果当前不是最后一轮迭代，更新输入文件
     if ((i != ${round})); then
